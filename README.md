@@ -11,6 +11,12 @@ remote hosts. Commands are run using
 composer require itk-dev/remote-console-commands-bundle
 ```
 
+Edit `app/AppKernel.php` and include the bundle:
+
+```php
+            $bundles[] = new ItkDev\RemoteConsoleCommandsBundle\ItkDevRemoteConsoleCommandsBundle();
+```
+
 Create a [`hosts.yaml`](Resources/hosts.yaml) file
 (cf. [https://deployer.org/docs/hosts](https://deployer.org/docs/hosts))
 in the project root, e.g:

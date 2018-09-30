@@ -2,8 +2,7 @@
     "name": "itk-dev/remote-console-commands-bundle",
     "description": "Execute remote console commands",
     "require": {
-        "deployer/deployer": "^6.3",
-        "symfony/framework-bundle": "^4.1"
+        "symfony/framework-bundle": "^2.7"
     },
     "authors": [
         {
