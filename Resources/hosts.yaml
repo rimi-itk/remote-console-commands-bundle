@@ -1,0 +1,19 @@
+stg.example.com:
+    # The stage
+    stage: stg
+    # Project root on server
+    release_path: /home/www/stg.example.com/htdocs/
+    # Use custom "bin/console" command. Relative paths are relative to `release_path`
+    paths:
+        bin/console: ../scripts/console
+    # Environment
+    env:
+        APP_ENV: prod
+
+example.com:
+    stage: prod
+    release_path: /home/www/stg.example.com/htdocs/
+    paths:
+        bin/console: ../scripts/console
+    env:
+        APP_ENV: prod

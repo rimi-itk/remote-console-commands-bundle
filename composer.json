@@ -1,0 +1,45 @@
+{
+    "name": "itk-dev/remote-console-commands-bundle",
+    "description": "Execute remote console commands",
+    "require": {
+        "deployer/deployer": "^6.3",
+        "symfony/framework-bundle": "^4.1"
+    },
+    "authors": [
+        {
+            "name": "Mikkel Ricky",
+            "email": "rimi@aarhus.dk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ItkDev\\RemoteConsoleCommandsBundle\\": ""
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.3",
+        "friendsofphp/php-cs-fixer": "^2.13"
+    },
+    "scripts": {
+        "check-coding-standards/php-cs-fixer": [
+            "php -n vendor/bin/php-cs-fixer --config=.php_cs.dist fix --dry-run"
+        ],
+        "check-coding-standards/phpcs": [
+            "vendor/bin/phpcs --standard=phpcs.xml.dist"
+        ],
+        "check-coding-standards": [
+            "@check-coding-standards/php-cs-fixer",
+            "@check-coding-standards/phpcs"
+        ],
+        "apply-coding-standards/php-cs-fixer": [
+            "php -n vendor/bin/php-cs-fixer --config=.php_cs.dist fix"
+        ],
+        "apply-coding-standards/phpcs": [
+            "vendor/bin/phpcbf --standard=phpcs.xml.dist"
+        ],
+        "apply-coding-standards": [
+            "@apply-coding-standards/php-cs-fixer",
+            "@apply-coding-standards/phpcs"
+        ]
+    }
+}
